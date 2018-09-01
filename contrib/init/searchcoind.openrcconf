@@ -1,0 +1,26 @@
+# /etc/conf.d/searchcoind: config file for /etc/init.d/searchcoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/searchcoin/searchcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/searchcoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/searchcoind.pid"
+
+# Where to write searchcoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/searchcoind"
+
+# User and group to own searchcoind process
+#BITCOIND_USER="searchcoin"
+#BITCOIND_GROUP="searchcoin"
+
+# Path to searchcoind executable
+#BITCOIND_BIN="/usr/bin/searchcoind"
+
+# Nice value to run searchcoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

@@ -1,0 +1,26 @@
+[Unit]
+Description=Searchcoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=searchcoin
+Group=searchcoin
+
+Type=forking
+PIDFile=/var/lib/searchcoind/searchcoind.pid
+
+ExecStart=/usr/bin/searchcoind -daemon -pid=/var/lib/searchcoind/searchcoind.pid \
+          -conf=/etc/searchcoin/searchcoin.conf -datadir=/var/lib/searchcoind
+
+ExecStop=-/usr/bin/searchcoin-cli -conf=/etc/searchcoin/searchcoin.conf \
+         -datadir=/var/lib/searchcoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

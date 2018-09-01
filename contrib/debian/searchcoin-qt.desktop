@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Searchcoin
+Comment=Searchcoin P2P Cryptocurrency
+Comment[fr]=Searchcoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Searchcoin, eşten eşe kriptografik sanal para birimi
+Exec=searchcoin-qt %u
+Terminal=false
+Type=Application
+Icon=searchcoin128
+MimeType=x-scheme-handler/searchcoin;
+Categories=Office;Finance;
